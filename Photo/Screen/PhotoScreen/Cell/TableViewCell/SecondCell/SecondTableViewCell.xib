@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="248" id="KGk-i7-Jjw" customClass="SecondTableViewCell" customModule="Photo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gz-e5-MkD">
+                        <rect key="frame" x="10" y="10" width="300" height="178"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1K-Wp-uZL">
+                        <rect key="frame" x="25" y="25" width="270" height="148"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название локации" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIj-2g-n5L">
+                                <rect key="frame" x="10" y="10" width="205" height="34"/>
+                                <color key="backgroundColor" red="0.91754716629999999" green="0.91770458219999995" blue="0.91753727200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="PGU-lF-o9D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-9F-6zH">
+                                <rect key="frame" x="10" y="49" width="250" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="VRc-do-rwc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="05W-eG-AIL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-Qq-R8D">
+                                <rect key="frame" x="230" y="12" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PPF-jM-chw"/>
+                                    <constraint firstAttribute="width" secondItem="iZ2-Qq-R8D" secondAttribute="height" multiplier="1:1" id="Qzl-hp-uEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPhotoButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jpv-Tc-tor"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91754716629999999" green="0.91770458219999995" blue="0.91753727200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iZ2-Qq-R8D" secondAttribute="trailing" constant="10" id="5km-QJ-ahQ"/>
+                            <constraint firstItem="qIj-2g-n5L" firstAttribute="top" secondItem="f1K-Wp-uZL" secondAttribute="top" constant="10" id="8BX-HE-u4A"/>
+                            <constraint firstAttribute="trailing" secondItem="6VD-9F-6zH" secondAttribute="trailing" constant="10" id="CkJ-6A-3IH"/>
+                            <constraint firstItem="qIj-2g-n5L" firstAttribute="leading" secondItem="f1K-Wp-uZL" secondAttribute="leading" constant="10" id="JXj-Nf-yBa"/>
+                            <constraint firstItem="6VD-9F-6zH" firstAttribute="top" secondItem="qIj-2g-n5L" secondAttribute="bottom" constant="5" id="LsQ-mp-OOj"/>
+                            <constraint firstItem="iZ2-Qq-R8D" firstAttribute="leading" secondItem="qIj-2g-n5L" secondAttribute="trailing" constant="15" id="Ole-El-I6w"/>
+                            <constraint firstItem="6VD-9F-6zH" firstAttribute="leading" secondItem="f1K-Wp-uZL" secondAttribute="leading" constant="10" id="gwk-ig-lAn"/>
+                            <constraint firstItem="iZ2-Qq-R8D" firstAttribute="top" secondItem="f1K-Wp-uZL" secondAttribute="top" constant="12" id="kqy-CU-u4X"/>
+                            <constraint firstAttribute="bottom" secondItem="6VD-9F-6zH" secondAttribute="bottom" constant="10" id="t9y-iV-O32"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="f1K-Wp-uZL" secondAttribute="bottom" constant="25" id="FEQ-ha-8Sz"/>
+                    <constraint firstItem="5gz-e5-MkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Jg3-eP-nGH"/>
+                    <constraint firstAttribute="bottom" secondItem="5gz-e5-MkD" secondAttribute="bottom" constant="10" id="Kp6-uQ-wDg"/>
+                    <constraint firstItem="5gz-e5-MkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PsI-rK-1og"/>
+                    <constraint firstItem="f1K-Wp-uZL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="XhI-XT-xmG"/>
+                    <constraint firstItem="f1K-Wp-uZL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="jHV-lP-2iA"/>
+                    <constraint firstAttribute="trailing" secondItem="f1K-Wp-uZL" secondAttribute="trailing" constant="25" id="rMn-um-9Fb"/>
+                    <constraint firstAttribute="trailing" secondItem="5gz-e5-MkD" secondAttribute="trailing" constant="10" id="wc3-ir-QHA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addPhotoButton" destination="iZ2-Qq-R8D" id="Agi-DH-PNP"/>
+                <outlet property="collectionView" destination="6VD-9F-6zH" id="jr2-CL-cEe"/>
+                <outlet property="lovationTextField" destination="qIj-2g-n5L" id="gY2-yt-Vc7"/>
+                <outlet property="shadowView" destination="5gz-e5-MkD" id="Vpq-A4-h4V"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="170.08928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
